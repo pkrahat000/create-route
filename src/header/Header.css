@@ -1,0 +1,8 @@
+.link a{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: 700;
+}
+.link a:hover{
+    font-size: large;
+}

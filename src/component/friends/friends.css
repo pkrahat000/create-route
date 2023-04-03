@@ -1,0 +1,7 @@
+.Friends-Length{
+    position: static;
+    color: rgb(255, 65, 65);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr );
+    gap: 20px;
+}

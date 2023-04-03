@@ -9,7 +9,7 @@ const Header = () => {
     return (
         <div className='link'>
             <ActiveLink to="Home">Home</ActiveLink>
-            <ActiveLink to="Manu">Manu</ActiveLink>
+            <ActiveLink to="Manu">Menu</ActiveLink>
             <ActiveLink to="Posts">Blogs</ActiveLink>
             <ActiveLink to='Friends'>Friends</ActiveLink>
             <ActiveLink to="Contract">Contract</ActiveLink>

@@ -4,6 +4,7 @@ import App from './App'
 import Manu from './component/manu/Manu'
 import {
   createBrowserRouter,
+  Outlet,
   RouterProvider,
 } from "react-router-dom";
 import './index.css'
@@ -14,26 +15,14 @@ import Friends from './component/friends/Friends';
 import FriendDetails from './component/friendDetails/FriendDetails';
 import Posts from './component/posts/Posts';
 import PostBody from './component/postBody/PostBody';
-
+import Main from './component-practice/main/Main';
 /* 
 1. componenet make
 2. route set
 3. link 
 */
-/* const router = createBrowserRouter([
-  {
-    path: "/Home",
-    element: <Home></Home>
-  },
-  {
-    path: "/Manu",
-    element: <Manu/>,
-  },
-  {
-    path: "/Contract",
-    element: <Contract></Contract>,
-  },
-]); */
+
+
 
 const router = createBrowserRouter([
   {
@@ -75,18 +64,55 @@ const router = createBrowserRouter([
     },
     {
       path:'*',
-      element: <div>4o4 Not Found</div>
+      element: <h1>4o4 Not Found</h1>
     },
   ]
 },
 
 ])
 
+//* practice 1
+/* const router = createBrowserRouter([
+  {
+    path: "/Home",
+    element: <Home></Home>
+  },
+  {
+    path: "/Manu",
+    element: <Manu/>,
+  },
+  {
+    path: "/Contract",
+    element: <Contract></Contract>,
+  },
+]); */
+
+//* practice 2
+//  const RouterEdit = createBrowserRouter([
+//   {
+//     path:'/',
+//     element: <Main></Main>,
+//     /* //! Problems ??
+//      <h2>This is menu</h2> tag a outlet kivabe set korbo ??
+//     */
+//     children: [
+//       {
+//         path :'/Menu',
+//         element : <h4>Menu Section</h4>
+//       },
+//       {
+//         path :'/Blogs',
+//         element : <h4>Blogs Section</h4>
+//       }
+//     ]
+//   }
+//  ]);
+
+
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* <Header></Header> */}
      <RouterProvider router={router}></RouterProvider>
   </React.StrictMode>,
 )
